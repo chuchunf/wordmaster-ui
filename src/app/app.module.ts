@@ -9,16 +9,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { jqxBarGaugeComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxbargauge';
-import { jqxChartComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxchart';
+
+import { HeaderModule } from './header/header.module';
+import { SidebarModule } from './sidebar/sidebar.module';
+import { MainModule } from './main/main.module';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    jqxBarGaugeComponent,
-    jqxChartComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +26,10 @@ registerLocaleData(en);
     NgZorroAntdModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HeaderModule,
+    SidebarModule,
+    MainModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

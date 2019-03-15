@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponentComponent } from './header-component/header-component.component';
+
+import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
+
+import { HeaderComponent} from './header-component/header-component';
 
 @NgModule({
-  declarations: [HeaderComponentComponent],
+  declarations: [HeaderComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    NgZorroAntdModule
   ],
-  exports: [HeaderComponentComponent]
+  exports: [HeaderComponent]
 })
 export class HeaderModule { }
