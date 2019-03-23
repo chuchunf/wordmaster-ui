@@ -1,13 +1,14 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  title = 'PROJECT-NAME';
+  constructor(private router: Router) {}
 
-  dataSet = [{'word': 'abcd', 'sample': 'this is a sample sentence.', 'meaning': 'means abcde'}
-    , {'word': 'defg', 'sample': 'another sample sentence.', 'meaning': 'means defgh'}];
+  logout() {
+    this.router.navigate(['/login']);
+  }
 }
