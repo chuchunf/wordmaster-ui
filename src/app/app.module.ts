@@ -9,13 +9,12 @@ import en from '@angular/common/locales/en';
 
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 
-import { HeaderModule } from './header/header.module';
-import { SidebarModule } from './sidebar/sidebar.module';
-import { MainModule } from './main/main.module';
+// import { HeaderModule } from './header/header.module';
+// import { SidebarModule } from './sidebar/sidebar.module';
+// import { MainModule } from './main/main.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home.component';
 import { LoginComponent } from './login.component';
 
 registerLocaleData(en);
@@ -23,7 +22,6 @@ registerLocaleData(en);
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     LoginComponent
   ],
   imports: [
@@ -34,9 +32,9 @@ registerLocaleData(en);
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    HeaderModule,
-    SidebarModule,
-    MainModule,
+//    HeaderModule,
+//    SidebarModule,
+//    MainModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
