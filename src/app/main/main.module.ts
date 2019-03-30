@@ -9,14 +9,12 @@ import { MainRoutingModule } from './main-routing.module';
 
 import { WordListComponent } from './wordlist-component/wordlist-component';
 import { WordDetailComponent } from './worddetail-component/worddetail-component';
-import { MainComponent } from './main-component';
 import { HomeComponent } from './home.component';
 
 @NgModule({
     declarations: [
         WordListComponent,
         WordDetailComponent,
-        MainComponent,
         HomeComponent,
     ],
     imports: [
@@ -27,7 +25,6 @@ import { HomeComponent } from './home.component';
       SidebarModule,
     ],
     exports: [
-      MainComponent,
       HomeComponent,
       WordListComponent,
       WordDetailComponent,

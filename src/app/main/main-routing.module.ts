@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { WordListComponent } from './wordlist-component/wordlist-component';
 import { WordDetailComponent } from './worddetail-component/worddetail-component';
-import { MainComponent } from './main-component';
 import { HomeComponent } from './home.component';
 
 const routes: Routes = [
