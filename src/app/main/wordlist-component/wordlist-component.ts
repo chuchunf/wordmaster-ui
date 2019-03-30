@@ -20,7 +20,7 @@ import { Router, ActivatedRoute } from '@angular/router';
           <ng-template ngFor let-data [ngForOf]="wordListTable.data">
             <tr>
               <td nzShowExpand [(nzExpand)]="data.expand"></td>
-              <td (click)="clickWord(data.word)">{{data.word}}</td>
+              <td (click)="clickWord(data.word)" style="cursor: pointer;">{{data.word}}</td>
               <td>{{data.sample}}</td>
               <td class="action">
                 <i nz-icon [type]="'star'" [theme]="'twotone'" [twoToneColor]="'#eb2f96'"></i>
