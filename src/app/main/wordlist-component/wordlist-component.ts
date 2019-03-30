@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main-wordlist',
@@ -19,7 +20,7 @@ import { Component} from '@angular/core';
           <ng-template ngFor let-data [ngForOf]="wordListTable.data">
             <tr>
               <td nzShowExpand [(nzExpand)]="data.expand"></td>
-              <td>{{data.word}}</td>
+              <td (click)="clickWord(data.word)">{{data.word}}</td>
               <td>{{data.sample}}</td>
               <td class="action">
                 <i nz-icon [type]="'star'" [theme]="'twotone'" [twoToneColor]="'#eb2f96'"></i>
@@ -62,4 +63,10 @@ import { Component} from '@angular/core';
 export class WordListComponent {
     dataSet = [{'word': 'abcd', 'sample': 'this is a sample sentence.', 'meaning': 'means abcde'}
     , {'word': 'defg', 'sample': 'another sample sentence.', 'meaning': 'means defgh'}];
+
+  constructor(private router: Router) { }
+
+  public clickWord(word: String) {
+    this.router.navigate(['/home/detail']);
+  }
 }
