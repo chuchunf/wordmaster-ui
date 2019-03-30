@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +23,7 @@ import { Component, OnInit } from '@angular/core';
         [nzMode]="'horizontal'"
         style="line-height: 64px; float: right; "
       >
-        <li nz-menu-item>
+        <li nz-menu-item (click)="clickHome()">
           <i
             nz-icon
             [type]="'home'"
@@ -57,8 +58,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  public clickHome() {
+    this.router.navigate(['/home/list']);
   }
 }
